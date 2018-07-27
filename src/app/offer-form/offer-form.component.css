@@ -1,0 +1,33 @@
+.container {
+    width:50%;
+    margin:0 auto 0 auto;
+}
+
+input, textarea, mat-select{
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.titleArea{
+    margin: 2% auto 5% 5%;
+}
+
+form{
+    background-color: #FAFAFA;
+    padding:5%;
+
+}
+
+form > label{
+    color:#B6B6B6;
+}
+.form-group{
+    margin-bottom:5%;
+}
+
+.btn-success{
+    background-color: #3D74ED;
+}
+

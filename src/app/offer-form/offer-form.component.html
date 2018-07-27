@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="titleArea">
+      <h3>Form</h3>
+      <h5>Please fill out the attached form to upload your brands offer to our system</h5>
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="strName">Name of Offer</label>
+        <textarea type="text" class="form-control" id="strName" required></textarea>
+      </div>
+ 
+      <div class="form-group">
+        <label for="strType">Offer Type</label>
+        <mat-select class="form-control" id="strType" required>
+            <mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
+        </mat-select>
+      </div>
+
+      <div class="form-group">
+        <label for="dtBestDate">Valid Best Before Dates</label>
+          <p>
+          <mat-form-field>
+            <input matInput [matDatepicker]="dtBestDate" placeholder="Choose a date" disabled>
+            <mat-datepicker-toggle matSuffix [for]="dtBestDate"></mat-datepicker-toggle>
+            <mat-datepicker #dtBestDate disabled="false"></mat-datepicker>
+          </mat-form-field>
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label for="intPrchUnlock">Number of Purchases Until Reward is Unlocked</label>
+        <mat-select class="form-control" id="intPrchUnlock" required>
+          <mat-option *ngFor="let number of numbers" [value]="number">{{number}}</mat-option>
+        </mat-select>
+      </div>
+
+      <div class="form-group">
+        <label for="dblReVal">Reward Value</label>
+        <input type="text" class="form-control" id="dblReVal" required>
+      </div>
+
+      <div class="form-group">
+        <label for="strUPCs">Valid UPCs</label>
+        <textarea type="text" class="form-control" id="strUPCs" required></textarea>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="strPicOffer">Picture for Offer</label>
+        <textarea type="text" class="form-control" id="strPicOffer" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="strReq">Other Requests</label>
+        <textarea class="form-control" id="strReq" required></textarea>
+      </div>
+ 
+      <button type="submit" class="btn btn-success">Submit</button>
+ 
+    </form>
+</div>
